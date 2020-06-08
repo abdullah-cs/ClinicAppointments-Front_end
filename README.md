@@ -9,8 +9,8 @@ The Clinic Appointments is a simple website to manage patient appointments. The 
 ## UI
 
 ![home page](/images/home_page.png)
-![home page](/images/new_appointment_page.png)
-![home page](/images/appointment_details_page.png)
+![new appointment page](/images/new_appointment_page.png)
+![appointment details page](/images/appointment_details_page.png)
 
 ---
 
