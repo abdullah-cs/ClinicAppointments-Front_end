@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Appointment</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="/css/form.css" />
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <div class="banner">
+          <h1>New Appointment Form</h1>
+        </div>
+
+        <div class="item name">
+          <p>Full name</p>
+          <input type="text" id="name" name="name" placeholder="Full name" required />
+          <p class="error"></p>
+        </div>
+
+        <div class="question gender">
+          <p>Gender</p>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="Male" id="male" name="gender" required />
+              <label for="male" class="radio"><span>Male</span></label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="female" name="gender" required />
+              <label for="female" class="radio"><span>Female</span></label>
+            </div>
+          </div>
+          <p class="error"></p>
+        </div>
+
+        <div class="item email">
+          <p>Email</p>
+          <input type="email" id="email" name="email" required />
+          <p class="error"></p>
+        </div>
+
+        <div class="item phone">
+          <p>Phone</p>
+          <input type="number" name="phone" id="phone" placeholder="9665########" required />
+          <p class="error"></p>
+        </div>
+
+        <div class="item date">
+          <p>Appointment Date</p>
+          <input type="date" id="date" name="date" required />
+          <i class="fas fa-calendar-alt"></i>
+          <p class="error"></p>
+        </div>
+
+        <div class="item address">
+          <p>Address</p>
+          <input type="text" id="address" name="address" required />
+          <p class="error"></p>
+        </div>
+
+        <div class="item doctor">
+          <p>Doctor</p>
+          <select id="doctor" required>
+            <option value="">Doctor</option>
+            <option value="1">Dr.Ahmed</option>
+            <option value="2">Dr.Nora</option>
+            <option value="3">Dr.Hassan</option>
+            <option value="4">Dr.Sara</option>
+          </select>
+          <p class="error"></p>
+        </div>
+
+        <div class="btn-block">
+          <button id="send" type="submit" >Send</button>
+          <button id="back" type="button" onclick=" window.location.href = '/' " >Back</button>
+        </div>
+      </form>
+    </div>
+    <script src="/js/addForm.js"></script>
+  </body>
+</html>
