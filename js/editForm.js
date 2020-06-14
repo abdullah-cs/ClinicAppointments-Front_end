@@ -68,7 +68,14 @@ async function updateData() {
 form.onsubmit =  async function (event) {
 
     event.preventDefault();
-    removeErrorMessages()
+    removeErrorMessages();
+
+    name.value = name.value.split(/\s+/).join(' ').trim();
+
+    if (name.value.length == 3 && (name.value.split(" ").length - 1) == 1) {
+        nameError.textContent = 'Name must be between 3 to 30 characters';
+        return false;
+    }
 
     appointment.fullName = name.value;
     appointment.gender = (male.checked ? 'Male' : 'Female');
