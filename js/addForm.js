@@ -16,6 +16,7 @@ const nameError = document.querySelector('.name .error');
 const phoneError = document.querySelector('.phone .error');
 const addressError = document.querySelector('.address .error');
 const dateError = document.querySelector('.date .error');
+const genderError = document.querySelector('.gender .error');
 
 let appointment = {
     "fullName": "",
@@ -53,7 +54,14 @@ form.onsubmit =  async function (event) {
     }
 
     appointment.fullName = name.value;
-    appointment.gender = (male.checked ? 'Male' : 'Female');
+    if (male.checked) {
+        appointment.gender = 'Male';
+    }else if(female.checked){
+        appointment.gender = 'Female';
+    }else{
+        genderError.textContent = 'Gender is mandatory'; 
+        return false;
+    }
     appointment.email = email.value;
     appointment.phoneNumber = phone.value;
     appointment.appointmentDate = date.value;
